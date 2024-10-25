@@ -24,6 +24,15 @@ layout: default
             <div class="col-4">
               <img src="{{ page.image | relative_url }}" alt="{{ page.name }} product image" class="w-100">
             </div>
+            <script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+'event': 'product_page_viewed',
+'product_name': '{{ page.name }}',
+'product_id': '{{ page.identifier }}',
+'product_price': {{ page.price }},
+});
+</script>
           </div>
         </div>
       </div>
